@@ -28,6 +28,7 @@ def main():
     # İkon Atıfı
     st.markdown('<span style="font-size: 10px">The icon <a href="https://iconscout.com/icons/bubble" class="text-underline font-size-sm" target="_blank">Bubble</a> by <a href="https://iconscout.com/contributors/vincent-le-moign" class="text-underline font-size-sm" target="_blank">Vincent Le moign</a></span>', unsafe_allow_html=True)
 
+    st.write("This app allows you to ask questions about the content of a PDF file. The app uses OpenAI's GPT-3 model to answer your questions. Please enter your OpenAI API Key and upload a PDF file to get started. Then you can ask questions about the content of the PDF file.")
     # API Anahtarı Formu
     api_key = st.text_input("Enter your OpenAI API Key", type="password")
     if not api_key:
@@ -65,7 +66,7 @@ def main():
 
         # Kullanıcı Sorusu
         st.write("Please ask questions about PDF content")
-        user_question = st.text_area("Enter Question Here")
+        user_question = st.text_input("Enter Question Here")
         if user_question:
             st.write("Searching for answer...")
             docs = knowledge_base.similarity_search(user_question)
