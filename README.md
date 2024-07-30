@@ -13,6 +13,7 @@ Check out the live demo: [Ask To PDF](https://asktopdf.streamlit.app/)
 ## Installation
 
 To install the required packages, run:
+
 ```sh
 pip install -r requirements.txt
 ```
@@ -20,6 +21,7 @@ pip install -r requirements.txt
 ## Usage
 
 To run the application, use:
+
 ```sh
 streamlit run app.py
 ```
